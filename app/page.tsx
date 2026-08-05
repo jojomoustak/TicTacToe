@@ -224,30 +224,39 @@ export default function Home() {
 
   // SVG Component για το X
   const DrawX = ({ alreadyAnimated }: { alreadyAnimated: boolean }) => (
-    <svg className="w-16 h-16 md:w-24 md:h-24 stroke-white stroke-[6px] stroke-linecap-round fill-none">
-      <line
-        x1="15" y1="15" x2="85" y2="85"
-        className={alreadyAnimated ? "" : "animate-draw-path-1"}
-        style={{ strokeDasharray: 100, strokeDashoffset: alreadyAnimated ? 0 : 100 }}
-      />
-      <line
-        x1="85" y1="15" x2="15" y2="85"
-        className={alreadyAnimated ? "" : "animate-draw-path-2"}
-        style={{ strokeDasharray: 100, strokeDashoffset: alreadyAnimated ? 0 : 100 }}
-      />
-    </svg>
-  );
+  <svg 
+    viewBox="0 0 100 100" 
+    className="w-full h-full stroke-white stroke-[6px] stroke-linecap fill-none p-2"
+  >
+    <line
+      x1="15" y1="15" x2="85" y2="85"
+      className={alreadyAnimated ? "" : "animate-draw-path-1"}
+      style={{ strokeDasharray: 100, strokeDashoffset: alreadyAnimated ? 0 : 100 }}
+    />
+    <line
+      x1="85" y1="15" x2="15" y2="85"
+      className={alreadyAnimated ? "" : "animate-draw-path-2"}
+      style={{ strokeDasharray: 100, strokeDashoffset: alreadyAnimated ? 0 : 100 }}
+    />
+  </svg>
+);
+
 
   // SVG Component για το O
   const DrawO = ({ alreadyAnimated }: { alreadyAnimated: boolean }) => (
-    <svg className="w-16 h-16 md:w-24 md:h-24 stroke-white stroke-[6px] fill-none">
-      <circle
-        cx="50" cy="50" r="35"
-        className={alreadyAnimated ? "" : "animate-draw-circle"}
-        style={{ strokeDasharray: 220, strokeDashoffset: alreadyAnimated ? 0 : 220 }}
-      />
-    </svg>
-  );
+  <svg 
+    viewBox="0 0 100 100" 
+    className="w-full h-full stroke-white stroke-[6px] fill-none p-2"
+  >
+    <circle
+      cx="50" 
+      cy="50" 
+      r="35"
+      className={alreadyAnimated ? "" : "animate-draw-circle"}
+      style={{ strokeDasharray: 220, strokeDashoffset: alreadyAnimated ? 0 : 220 }}
+    />
+  </svg>
+);
 
   // Ποσοστιαίες συντεταγμένες SVG για τη λευκή γραμμή νίκης
   const lineCoords: Record<string, { x1: string; y1: string; x2: string; y2: string }> = {
