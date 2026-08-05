@@ -301,7 +301,7 @@ export default function Home() {
       {/* State message */}
       <div className="text-2xl font-bold text-white h-8">
         {winner === "Draw" && "🤝 It's a Draw!"}
-        {winner && winner !== "Draw" && `🎉 Winner: ${winner === "X" ? "You!" : "🤖 AI Won!"}`}
+        {winner && winner !== "Draw" && `🎉 Winner: ${winner === "X" ? "You!" : "🤖 AI!"}`}
         {!winner && (isAiTurn ? "🤖 AI is thinking..." : "🎮 Your Turn (X)")}
       </div>
 
